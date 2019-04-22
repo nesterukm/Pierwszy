@@ -10,6 +10,8 @@ namespace Pierwszy
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Cześć");
+
         }
     }
 }
