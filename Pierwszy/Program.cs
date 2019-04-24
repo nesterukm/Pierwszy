@@ -10,64 +10,29 @@ namespace Pierwszy
     {
         static void Main(string[] args)
         {
-            ValueTypes();
+            //string name = args[0];
 
-            for (; ; )
+            Console.Write("Cześć jak ma sz imię: ");
+            string name = Console.ReadLine();
+            Console.WriteLine("Cześć "+name);
+
+            Console.Write("Podaj wiek: ");
+
+            int age = int.Parse(Console.ReadLine());
+
+            if (age >= 18)
             {
-                Greeting();
-                Age();
-                Settings();
-            }
-        }
-
-        private static void ValueTypes()
-        {
-            int maxInt = int.MaxValue;
-            int minInt = int.MinValue;
-            long maxLong = long.MaxValue;
-            long minLong = long.MinValue;
-
-            Console.WriteLine("maxInt: " + maxInt);
-            Console.WriteLine("minInt: " + minInt);
-            Console.WriteLine("maxLong: " + maxLong);
-            Console.WriteLine("minLong: " + minLong);
-        }
-
-        private static void Settings()
-        {
-            Console.ReadKey();
-            Console.Clear();
-            Console.ResetColor();
-        }
-
-        private static void Age()
-        {
-            Console.Write("Podaj wiek:: ");
-            int age;
-            bool result = int.TryParse(Console.ReadLine(), out age);
-
-
-            if (age > 18)
-            {
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("Jesteś pełnoletni");
-            }
-            else if (result == false)
-            {
-                //Console.ForegroundColor = ConsoleColor.Magenta;
-                Console.WriteLine("wprowadź prawidłowe dane!");
+                Console.WriteLine("Jesteś pełnoletni!");
             }
             else
             {
-                Console.WriteLine("Jest yulko mleko");
+                Console.WriteLine("Gnojek");
             }
-        }
+            Console.WriteLine("");
 
-        private static void Greeting()
-        {
-            Console.Write("Podaj Imię:");
-            string name = Console.ReadLine();
-            Console.WriteLine("Cześć " + name);
+            Console.ReadLine();
+            
+
         }
     }
 }
